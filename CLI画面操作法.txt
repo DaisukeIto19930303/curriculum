@@ -1,0 +1,22 @@
+CLI画面操作法
+
+      ユーザモード hostname>
+         ↓　　enable（en）　
+      特権モード hostname#
+         ↓　　configure terminal（conf t）
+      グローバルコンフィギュレーションモード　hostname(config)#
+
+の順で階層が分かれている
+
+特権モードはステータス確認ができる階層
+⌘コマンド
+・hostname#show startup-config（hostname#show star）起動時の設定確認（保存後の設定）
+・hostname#show running-config（hostname#show run）現在の設定確認（保存前の設定）
+・hostname#copy running-config startup-config（hostname#write memory）変更内容の保存
+
+グローバルコンフィギュレーションモードはステータス変更ができる階層
+⌘コマンド
+・hostname(config)#hostname　[ホスト名]　hostnameの変更
+
+・hostname#copy running-config startup-config（hostname#write memory）変更内容の保存
+
