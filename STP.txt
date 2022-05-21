@@ -1,0 +1,28 @@
+
+問１
+Switch3：4097
+
+問２
+switch1 F0/1=DP F0/2=RP
+switch2 F0/1=RP F0/2=BP
+switch3 E0/1=DP E0/2=DP
+switch4 E0/1=DP E0/2=RP
+
+[理由]
+『RP』
+①switch1-switch3のルートパスコスト=100
+②switch2-switch-1-switch3のルートパスコスト=119
+③switch2-switch4-switch3のルートパスコスト=200
+④switch4-switch3のルートパスコスト=100
+ルートパスコストが一番遠いのは③の為switch1 F0/2,switch2 F0/1,switch4 E0/2がRPとしました。
+
+『DP』
+各コリジョンポートごとにDPが存在することから
+switch1 F0/1=DP
+switch3 E0/3,E/02=DP
+switch4 E0/1=DP
+
+switch4-switch2のコリジョンポートに関しては対向ポートに割り振りが無いことからブリッジIDを参照し選定
+
+『BP』
+switch2のF0/2のみ割り振りがない為BPとしました
