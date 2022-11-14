@@ -1,0 +1,42 @@
+@media screen and (max-width: 479px) {
+
+    /* .clearfix::after { 
+        content: '';
+        display: block; 
+        clear: both;
+    } */
+    .header{
+        width: 150px;
+    }
+    
+    .left{
+        float: none;
+        width: 150px;
+    }
+    .top{
+        
+        width: 150px;
+    }
+    .center{
+        width: 150px;
+        }
+    .center_right{
+        float: none;
+        margin: initial;
+        width: 150px;
+        }
+    .bootom{
+        float: none;
+        width: 150px;
+        
+        }
+    
+    .footer{
+        width: 150px;
+        
+        }
+    .center_left{
+        margin-left: initial;
+    }
+    
+}
