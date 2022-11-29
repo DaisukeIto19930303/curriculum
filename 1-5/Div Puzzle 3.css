@@ -4,7 +4,7 @@
     clear: both;
 }
 /* header部分 */
-.header{
+#header{
     width: 400px;
     height: 100px;
     background-color: #141f40;
@@ -78,7 +78,7 @@
     background-color: #ff863f;
 }
 /* footer部分 */
-.footer{
+#footer{
     width: 400px;
     height: 100px;
     background-color: #d98d30;
