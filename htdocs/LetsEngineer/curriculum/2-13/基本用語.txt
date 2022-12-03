@@ -1,0 +1,9 @@
+PostgreSQL・Oracle SQL
+    PostgreSQL→データをテーブル形式で管理するリレーショナルデータベース管理システム
+    Oracle SQL→Oracle Databaseのリレーショナルデータベース管理システム（RDBMS）に、情報の登録や検索を行うためのコマンド
+TortoiseGit・TortoiseSVN
+    TortoiseGit→Gitをより扱いやすくするために開発されたWindows用ソフトウェア
+    TortoiseSVN→バージョン管理システムのSubversion（SVN）を利用するためのクライアントソフトの一つ。
+外部設計・内部設計
+    外部設計→要件定義書をもとに操作画面や操作方法などのインタフェースを設計すること
+    内部設計→外部設計で決められた内容を実現するシステムやプログラムを設計すること
