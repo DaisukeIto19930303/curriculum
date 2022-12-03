@@ -1,0 +1,6 @@
+CakePHPの2系・3系の違い
+    2系に比べ3系は拡張性が高く使いやすくなったが、学習ホストが高い
+LAMP
+    OSのLinux、WebサーバーのApache、データベースのMySQL、プログラミングのPerl、PHP、Pythonを指す
+AWS
+    Amazonが提供している100以上のクラウドコンピューティングサービスの総称
