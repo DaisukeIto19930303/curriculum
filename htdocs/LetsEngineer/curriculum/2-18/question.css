@@ -1,0 +1,11 @@
+#main_content{
+    background-color: rgba(75, 75, 75, 0.884);
+    color: white;
+    font-family:"游明朝";
+    text-align: center;
+    margin-top: 80px;
+}
+.button{
+    border-radius: 5px;
+    border-width: 0px;
+}
