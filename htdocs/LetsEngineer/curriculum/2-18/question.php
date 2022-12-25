@@ -8,7 +8,7 @@ $question3 = ["join", "select", "insert", "update"];
 //② ①で作成した、配列から正解の選択肢の変数を作成してください
 $answer1 = $question1[0];
 $answer2 = $question2[3];
-$answer3 = $question3[2];
+$answer3 = $question3[1];
 
 // var_dump($_POST);
 ?>

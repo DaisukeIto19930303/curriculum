@@ -7,8 +7,17 @@ $question3 = $_POST['question3'];
 $answer1= $_POST['answer1'];
 $answer2= $_POST['answer2'];
 $answer3= $_POST['answer3'];
+
 // var_dump($_POST);
 //選択した回答と正解が一致していれば「正解！」、一致していなければ「残念・・・」と出力される処理を組んだ関数を作成する
+function answer_result($question,$answer){
+    if($answer == $question ){
+        $result = "正解!!";
+    }else{
+        $result = "不正解...";
+    };
+    echo $result;
+}
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -23,32 +32,17 @@ $answer3= $_POST['answer3'];
         <p><?php echo $my_name ?>さんの結果は・・・？</p>
         <p>①の答え</p>
         <?php       
-            if($question1 == $answer1){
-                $result = "正解!!";
-            }else{
-                $result = "不正解...";
-            };
-            echo $result;
+            answer_result($question1,$answer1);
         ?>
         <!--作成した関数を呼び出して結果を表示-->
         <p>②の答え</p>
         <?php
-            if($question2 == $answer2){
-                $result = "正解!!";
-            }else{
-                $result = "不正解...";
-            };
-            echo $result;
+            answer_result($question2,$answer2);
         ?>
         <!--作成した関数を呼び出して結果を表示-->
         <p>③の答え</p>
         <?php
-            if($question3 == $answer3){
-                $result = "正解!!";
-            }else{
-                $result = "不正解...";
-            };
-            echo $result;
+            answer_result($question3,$answer3);
         ?>
         <!--作成した関数を呼び出して結果を表示-->
     </body>
