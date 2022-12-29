@@ -1,0 +1,67 @@
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+header{
+    width: 1000px;
+    margin: 0 auto ;
+}
+
+.logo_bg {
+    height: 120px;
+    width: 200px;
+    background-color: #add8e6;
+    float: left;
+}
+.logo{
+    height: 90px;
+    width: 180px;
+    margin-top: 15px;
+    margin-left: 10px;
+    object-fit:cover;
+    
+}
+
+.header_left{
+    float: left;
+}
+.name_bg{
+    height: 60px;
+    width: 800px;
+    background-color: #87ceeb;
+    
+}
+.name{
+    /* display: none; */
+    text-align: right;
+    padding-top: 20px;
+}
+
+.last_date_bg{
+    height: 60px;
+    width: 800px;
+    background-color: #00ffff;
+}
+.date{
+    text-align: right;
+    padding-top: 20px;
+}
+table{
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+th {
+    background-color: #87ceeb;
+}
+.cell {
+    background-color: #e0ffff;
+}
+footer{
+    height: 50px;
+    width: 1000px;
+    background-color: #00ced1;
+    margin: 0 auto;
+}
