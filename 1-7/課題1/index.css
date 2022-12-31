@@ -1,0 +1,51 @@
+.clearfix::after { 
+    content: '';
+    display: block; 
+    clear: both;
+}
+/* 1段目 */
+#header{
+    width: 400px;
+    height: 100px;
+    background-color: #141f40;
+}
+
+/* 2段目 */
+.main_left{
+    width: 150px;
+    height: 250px;
+    background-color: #80bfa8;
+    float: left;
+}
+.main_right{
+    float: left;
+}
+.top{
+    width: 250px;
+    height: 100px;
+    background-color: #0093b7;
+}
+.left{
+    width: 100px;
+    height: 150px;
+    background-color: #dbd403;
+    float: left;
+}
+.right_top{
+    width: 150px;
+    height: 50px;
+    background-color: #ff9e6b;
+    margin-left: 100px;
+}
+.right_bottom{
+    width: 150px;
+    height: 100px;
+    background-color: #8c2727;
+    float: left;
+}
+/* 3段目 */
+#footer{
+    width: 400px;
+    height: 100px;
+    background-color: #d98d30;
+}
