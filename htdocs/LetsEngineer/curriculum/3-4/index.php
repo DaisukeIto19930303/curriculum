@@ -6,7 +6,17 @@
     $data = $db->getPostData()->fetchAll(PDO::FETCH_ASSOC);
     // var_dump($user);
     // var_dump($data);
-    
+
+    foreach($data as &$array){
+        if ($array ["category_no"] == 1){
+            $array["category_no"]  = "食事";
+        } else if ($array ["category_no"] == 2) {
+            $array["category_no"]  = "旅行";
+        } else if ($array ["category_no"] == 3){
+            $array["category_no"]  = "その他";
+        };
+    }
+    unset($array);
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -55,25 +65,15 @@
                 <th>本文</th>
                 <th>投稿日</th>
             </tr>
-                <?php foreach($data as $array){
-                        if ($array ["category_no"] == 1){
-                            $array["category_no"]  = "食事";
-                        } else if ($array ["category_no"] == 2) {
-                            $array["category_no"]  = "旅行";
-                        } else if ($array ["category_no"] == 3){
-                            $array["category_no"]  = "その他";
-                        };
-                    ?> 
+            <?php foreach($data as $array){?> 
                     <tr>
-                        <?php foreach($array as $value){
-                            ?> 
+                        <?php foreach($array as $value){?> 
                             <td class = cell>
                                 <?php echo $value;?>
                             </td>
                         <?php } ?>
                     </tr>
-                <?php } ?>  
-            
+                <?php } ?>
         </table>
     </main>
 
