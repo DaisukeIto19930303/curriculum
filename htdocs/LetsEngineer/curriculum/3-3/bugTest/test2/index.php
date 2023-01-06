@@ -1,6 +1,5 @@
 <!-- http://localhost/LetsEngineer/curriculum/3-3/bugTest/test2/index.php -->
 <?php
-// セッション開始
 include_once("dbconnect.php");
 
 // エラーメッセージ、登録完了メッセージの初期化
@@ -30,6 +29,8 @@ if (isset($_POST["signUp"])) {
 
         // 3. エラー処理
         try {
+            $pdo = new PDO($dsn, DB_USERNAME, DB_PASSWORD);
+
             $stmt = $pdo->prepare("INSERT INTO users(name, password) VALUES (?, ?)");
 
             $stmt->execute(array($username, password_hash($password, PASSWORD_DEFAULT)));  // パスワードのハッシュ化を行う（今回は文字列のみなのでbindValue(変数の内容が変わらない)を使用せず、直接excuteに渡しても問題ない）
