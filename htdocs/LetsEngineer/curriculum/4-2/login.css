@@ -1,0 +1,72 @@
+main{
+    position: relative;
+    top: 180px;
+    left: 500px;
+    width: 480px;
+    height: 400px;
+    /* background-color: blueviolet; */
+}
+
+p{
+    position: absolute;
+    top: -13px;
+    left: 1vw;
+    font-size: 32px;
+    font-family: -webkit-body;
+}
+
+.signUp_btn{
+    height: 32px;
+    width: 137px;
+    position: absolute;
+    top: 28px;
+    left: 290px;
+    background-color: #00b2c4;
+    color: white;
+    font-weight: bolder;
+    border: none;
+    font-family: -webkit-body;
+    border-radius: 5px;
+}
+
+#forms{
+    position: relative;
+    top: 128px;
+    left: 24px;
+}
+
+.user{
+    width: 380px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid rgb(205, 205, 205);
+}
+.pass{
+    width: 380px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid rgb(205, 205, 205);
+}
+
+.login_btn{
+    height: 40px;
+    width: 200px;
+    position: absolute;
+    top: 132px;
+    left: 0px;
+    background-color: #358fe4;
+    color: white;
+    font-weight: bolder;
+    border: none;
+    font-family: -webkit-body;
+    border-radius: 5px;
+}
+
+.login_btn:hover{
+    cursor: pointer;
+    background: #5ea6ea;
+}
+.signUp_btn:hover{
+    cursor: pointer;
+    background: #47cbda;
+}

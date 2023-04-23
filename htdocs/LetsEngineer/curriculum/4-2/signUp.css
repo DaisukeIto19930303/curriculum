@@ -1,0 +1,36 @@
+#main{
+    position: relative;
+    top: 200px;
+    left: 550px;
+}
+
+#name{
+    width: 350px;
+    height: 38px;
+    font-size: 18px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(205, 205, 205);
+}
+#password{
+    margin: 20px 0;
+    width: 350px;
+    height: 38px;
+    font-size: 18px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(205, 205, 205);
+}
+#signUp{
+    width: 180px;
+    height: 40px;
+    background: #358fe4;
+    font-size: 17px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+#signUp:hover{
+    cursor: pointer;
+    background: #5ea6ea;
+}

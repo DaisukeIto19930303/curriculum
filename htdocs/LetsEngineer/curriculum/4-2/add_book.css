@@ -1,0 +1,43 @@
+
+div{
+    position: relative;
+    top: 200px;
+    left: 550px;
+}
+
+#title{
+    width: 300px;
+    height: 30px;
+    font-size: 20px;
+    padding-left: 5px;
+    border-radius: 5px;
+    border: 1px solid rgb(205, 205, 205);
+}
+
+#date{
+    margin: 20px 0;
+    width: 300px;
+    height: 30px;
+    font-size: 20px;
+    padding-left: 5px;
+    border-radius: 5px;
+    border: 1px solid rgb(205, 205, 205);
+}
+
+#stock{
+    width: 200px;
+    height: 25px;
+    margin-top: 10px;
+    font-size: 15px;
+    padding-left: 5px;
+}
+
+#post{
+    margin-top: 20px;
+    width: 100px;
+    height: 35px;
+    background: #4e9be4;;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}

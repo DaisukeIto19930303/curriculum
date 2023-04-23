@@ -1,0 +1,75 @@
+#main_header{
+    height: 130px;
+    width: 500px;
+    position: relative;
+    top: 60px;
+    left: 415px;
+}
+
+.add_btn{
+    position: absolute;
+    top: 70px;
+    left: 10px;
+    width: 100px;
+    height: 35px;
+    background: #358fe4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.logout_btn{
+    position: absolute;
+    top: 70px;
+    left: 120px;
+    width: 100px;
+    height: 35px;
+    background: #6a6c6d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#stock_list {
+    table-layout: fixed;
+    text-align: center;
+    width: 700px;
+    position: relative;
+    top: 93px;
+    left: 415px;
+    border-collapse: collapse;
+    word-wrap: break-word;
+}
+
+.tab{
+    background: #d0cdcd;
+}
+
+td{
+    border: solid 1px;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+}
+
+.delete_btn{
+    display: block;
+    width: 60px;
+    margin: auto;
+    padding: 6px 0;
+    background: #ed3b18;
+    color: #FFF;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+}
+.add_btn:hover{
+    cursor: pointer;
+    background: #5ea6ea;
+}
+.logout_btn:hover{
+    cursor: pointer;
+    background: #8a8c8d;
+}
+.delete_btn:hover{
+    background: #f45839;
+}
