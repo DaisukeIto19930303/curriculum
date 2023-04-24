@@ -6,11 +6,11 @@ require_once('db_connect.php');
 if (isset($_POST["signUp"])) {
     $name = $_POST['name'];
     $password = $_POST['password'];
-    if(empty($name)){
-        echo "名前を入力してください";
-    }else if(empty($password)){
-        echo "パスワードを入力して下さい";
-    } elseif (!empty($_POST["name"])&&!empty($_POST["name"])) {
+    if(empty($name)){?>
+        <p> 名前を入力してください</p><?php
+    }else if(empty($password)){?>
+        <p>パスワードを入力して下さい</p><?php
+    } elseif (!empty($_POST["name"])&&!empty($_POST["password"])) {
     
         $sql = "INSERT INTO users (name, password) VALUES ('$name',:password)";
         $pdo = db_connect();
@@ -48,5 +48,6 @@ if (isset($_POST["signUp"])) {
             <input type="submit" value="新規登録" id="signUp" name="signUp" >
         </form>
     </div>
+    
 </body>
 </html>

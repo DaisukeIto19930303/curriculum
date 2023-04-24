@@ -4,12 +4,12 @@ require_once('db_connect.php');
 session_start();
 
 if (!empty($_POST)) {
-    if (empty($_POST["name"])) {
-        echo "名前が未入力です。";
+    if (empty($_POST["name"])) {?>
+        <p>名前が未入力です。</p><?php
     }
 
-    if (empty($_POST["pass"])) {
-        echo "パスワードが未入力です。";
+    elseif (empty($_POST["pass"])) {?>
+        <p>パスワードが未入力です。</p> <?php
     }
 
     if (!empty($_POST["name"]) && !empty($_POST["pass"])) {
@@ -32,11 +32,11 @@ if (!empty($_POST)) {
                 $_SESSION["user_name"] = $row['name'];
                 header("Location: main.php");
                 exit;
-            } else {
-                echo "パスワードに誤りがあります。";
+            } else {?>
+                <p>パスワードに誤りがあります。</p><?php
             }
-        } else {
-            echo "ユーザー名かパスワードに誤りがあります。";
+        } else {?>
+            <p>ユーザー名かパスワードに誤りがあります。</p><?php
         }
     }
 }
@@ -60,7 +60,7 @@ if (!empty($_POST)) {
     </head>
     <body>
         <main>
-            <p>ログイン画面</p>
+            <p class=login>ログイン画面</p>
             <button onclick="location.href='signUp.php'"class="signUp_btn">新規ユーザー登録</button>
             <form method="post" action="" id = forms >
                 <input type="text" name="name" class="user" placeholder="ユーザー名"><br><br>
@@ -68,6 +68,7 @@ if (!empty($_POST)) {
                 <input type="submit" value="ログイン" class="login_btn">
             </form>
         </main>
+        
     </body>
 </html>
 </body>

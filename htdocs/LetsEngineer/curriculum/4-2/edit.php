@@ -34,13 +34,15 @@ if ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 }
 
 if (isset($_POST["post"])) {
-    // if (empty($_POST["title"])) {
-    //     echo 'タイトルが未入力です。';
-    // } elseif (empty($_POST['date'])) {
-    //     echo '発売日が未入力です。';
-    // }elseif (empty($_POST['stock'])) {
-    //     echo '在庫数が未選択です';
-    // }
+    if (empty($_POST["title"])) {?>
+        <p>エラー:タイトルが未入力です</p>
+    <?php
+    } elseif (empty($_POST['date'])) {?>
+        <p>エラー:発売日が未入力です。</p>
+    <?php
+    }elseif (empty($_POST['stock'])) {?>
+        <p>エラー:変更数が未選択です。</p><?php
+    }
 
     if (!empty($_POST["title"])&&!empty($_POST["date"])&&!empty($_POST["stock"])) {
         $title = $_POST['title'];
@@ -99,20 +101,5 @@ if (isset($_POST["post"])) {
         <input type="submit" value="登録" id="post" name="post">
     </form>
     </div>
-    <script>
-        <?php
-        if (isset($_POST["post"])) {
-            if (empty($_POST["title"])) {?>
-                alert ("タイトルが未入力です");
-            <?php
-            } elseif (empty($_POST['date'])) {?>
-                alert("発売日が未入力です。");
-            <?php
-            }elseif (empty($_POST['stock'])) {?>
-                alert("在庫数が未選択です。");<?php
-            }
-        }
-        ?>
-    </script>
 </body>
 </html>

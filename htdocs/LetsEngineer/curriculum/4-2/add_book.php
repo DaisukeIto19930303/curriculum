@@ -7,6 +7,15 @@ require_once('function.php');
 check_user_logged_in();
 
 if (isset($_POST["post"])) {
+        if (empty($_POST["title"])) {?>
+            <p>タイトルが未入力です</p>
+        <?php
+        } elseif (empty($_POST['date'])) {?>
+            <p>発売日が未入力です。</p>
+        <?php
+        }elseif (empty($_POST['stock'])) {?>
+            <p>在庫数が未選択です。</p><?php
+        }
 
     if (!empty($_POST["title"])&&!empty($_POST["date"])&&!empty($_POST["stock"])) {
         $title = $_POST['title'];
@@ -65,20 +74,5 @@ if (isset($_POST["post"])) {
         <input type="submit" value="登録" id="post" name="post">
     </form>
     </div>
-    <script>
-        <?php
-        if (isset($_POST["post"])) {
-            if (empty($_POST["title"])) {?>
-                alert ("タイトルが未入力です");
-            <?php
-            } elseif (empty($_POST['date'])) {?>
-                alert("発売日が未入力です。");
-            <?php
-            }elseif (empty($_POST['stock'])) {?>
-                alert("在庫数が未選択です。");<?php
-            }
-        }
-        ?>
-    </script>
 </body>
 </html>

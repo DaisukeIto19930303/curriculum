@@ -34,3 +34,11 @@
     cursor: pointer;
     background: #5ea6ea;
 }
+
+p{
+    position: absolute;
+    top: 150px;
+    left: 560px;
+    z-index: 10;
+    font-size: 18px;
+}
