@@ -56,7 +56,18 @@ td{
     width: 60px;
     margin: auto;
     padding: 6px 0;
-    background: #ed3b18;
+    background: #c73d21;
+    color: #FFF;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+}
+.edit_btn{
+    display: block;
+    width: 60px;
+    margin: auto;
+    padding: 6px 0;
+    background: #229c3a;
     color: #FFF;
     text-decoration: none;
     text-align: center;
@@ -72,4 +83,7 @@ td{
 }
 .delete_btn:hover{
     background: #f45839;
+}
+.edit_btn:hover{
+    background: #2cc04a;
 }

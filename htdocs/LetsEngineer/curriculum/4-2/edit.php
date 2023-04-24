@@ -1,12 +1,46 @@
-<!-- http://localhost/LetsEngineer/curriculum/4-2/add_book.php -->
-
 <?php
 require_once('db_connect.php');
 require_once('function.php');
 
 check_user_logged_in();
 
+$id = $_GET['id'];
+if (empty($id)) {
+    header("Location: main.php");
+    exit;
+}
+
+$pdo = db_connect();
+
+try {
+    // SQL文の準備
+    $sql = "SELECT * FROM books WHERE id = :id";
+    // プリペアドステートメントの作成
+    $stmt = $pdo->prepare($sql);
+    // idのバインド
+    $stmt->bindParam(':id', $id);
+    $stmt->execute();
+} catch (PDOException $e) {
+    echo 'Error: ' . $e->getMessage();
+    die();
+}
+
+if ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+    $id = $row['id'];
+    $title = $row['title'];
+    $date = $row['date'];
+} else {
+    echo "対象のデータがありません。";
+}
+
 if (isset($_POST["post"])) {
+    // if (empty($_POST["title"])) {
+    //     echo 'タイトルが未入力です。';
+    // } elseif (empty($_POST['date'])) {
+    //     echo '発売日が未入力です。';
+    // }elseif (empty($_POST['stock'])) {
+    //     echo '在庫数が未選択です';
+    // }
 
     if (!empty($_POST["title"])&&!empty($_POST["date"])&&!empty($_POST["stock"])) {
         $title = $_POST['title'];
@@ -17,19 +51,18 @@ if (isset($_POST["post"])) {
         $pdo = db_connect(); 
 
         try {
-            $sql = "INSERT INTO books (title,date,stock) VALUES (:title,:date,:stock)";
+            $sql = "UPDATE books SET title = :title, date = :date, stock = :stock WHERE id = :id";
             
             $stmt = $pdo->prepare($sql);
-            $stmt->bindValue(':title', $title);
-            $stmt->bindValue(':date', $date);
-            $stmt->bindValue(':stock', $stock);
+            $stmt->bindParam(':title', $title);
+            $stmt->bindParam(':date', $date);
+            $stmt->bindParam(':stock', $stock);
+            $stmt->bindParam(':id', $id);
             $stmt->execute();
             header("Location: main.php");
         } catch (PDOException $e) {
-            echo '失敗: ' . $e->getMessage();
-
-            die();
-
+            exit('データベース接続失敗。' . $e->getMessage());
+        
         }
     }
 }
@@ -46,15 +79,16 @@ if (isset($_POST["post"])) {
 </head>
 <body>
     <div>
-    <h1>本 登録画面</h1>
+    <h1>本 変更画面</h1>
 
     <form method="POST" action="" id="form">
-        <input type="text" name="title" id="title" placeholder="タイトル">
+        <input type="hidden" name="id" value="<?php echo $id; ?>" >
+        <input type="text" name="title" id="title" value=<?php echo $title; ?>>
         <br>
-        <input type="text" name="date" id="date" onfocus="this.type='date'" onfocusout="this.type='text'" placeholder="発売日"><br>
+        <input type="date" name="date" id="date" value=<?php echo $date; ?>><br>
         在庫数<br>
         <select name="stock" id="stock" >
-            <option value="">選択してください</option>
+            <option value="">変更数</option>
             <?php 
             $i = 1;
             while($i <= 99){?>

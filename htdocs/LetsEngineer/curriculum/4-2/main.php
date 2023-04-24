@@ -36,13 +36,16 @@ try {
             <td>発売日</td>
             <td>在庫数</td>
             <td></td>
+            <td></td>
         </tr>
         <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { ?>
             <tr class="stock">
                 <td><?php echo $row['title'];?></td>
                 <td><?php echo $row['date'];?></td>
                 <td><?php echo $row['stock'];?></td>
+                <td><a href="edit.php?id=<?php echo $row['id']; ?>" class="edit_btn">編集</a></td>
                 <td><a href="delete_books.php?id=<?php echo $row['id']; ?>" class="delete_btn">削除</a></td>
+                
             </tr>
             <?php } ?>
     </table>
